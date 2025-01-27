@@ -11,7 +11,11 @@ RUN apt-get update -y
 RUN apt autoremove -y
 RUN apt-get clean
 
-# Run dependency installation and build using Bun
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN bun install
 RUN bun run install
 RUN bun run build
 
