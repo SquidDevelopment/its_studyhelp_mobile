@@ -16,7 +16,6 @@ WORKDIR /usr/src/app
 COPY . .
 
 RUN bun install
-RUN bun run install
 RUN bun run build
 
 # Start the application using Bun
