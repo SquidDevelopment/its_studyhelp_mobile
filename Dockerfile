@@ -17,8 +17,6 @@ WORKDIR /usr/src/app
 RUN bun install
 COPY . .
 
-RUN ls -la ./src-webviews
-
 # Run dependency installation and build using Bun
 RUN bun run dependencies
 RUN bun run build
